@@ -3,11 +3,17 @@
   <groupId>edu.psu.se411</groupId>
   <artifactId>observable-01</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <dependencies>
-  	<dependency>
-  		<groupId>org.codehaus.mojo</groupId>
-  		<artifactId>exec-maven-plugin</artifactId>
-  		<version>3.5.0</version>
-  	</dependency>
-  </dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>3.5.0</version>
+				<configuration>
+					<mainClass>edu.psu.se411.App</mainClass>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
 </project>

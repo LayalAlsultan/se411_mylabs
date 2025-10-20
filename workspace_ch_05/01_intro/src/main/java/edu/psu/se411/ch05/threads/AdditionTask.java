@@ -17,7 +17,7 @@ public class AdditionTask implements Runnable {
 			try {
 				counter++;
 				System.out.printf("Task %s added 1 and now count is %d%n", getThreadId(), getCounter());
-				if(counter  == 50) Thread.yield();
+				//if(counter  == 50) Thread.yield();
 				Thread.sleep(1000 / frequency);
 		    } catch (InterruptedException e) {
 				System.out.printf("Task %s was interrupted at count %d%n", getThreadId(), getCounter());

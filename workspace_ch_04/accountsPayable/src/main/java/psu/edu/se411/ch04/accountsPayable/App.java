@@ -15,7 +15,7 @@ public class App {
 	
 	public static void main(String[] args) {
 		logger.info("Application starting...");
-		
+
 		try {
 			Employee[] employees = new Employee[] {
 					new SalariedEmployee("EMP_001", "Salah", "Obeid", 15200.0),
@@ -23,6 +23,7 @@ public class App {
 					new SalariedEmployee("EMP_003", "Ramzi", "Obeikan", 21500.0),
 					new HourlyEmployee("EMP_004", "Ahmed", "Slimani", 30.0, 160.0)
 			};
+		
 			
 			for(Employee e: employees ) {
 				System.out.printf("%s%nEarnings: %.2fSAR%n%n",e.toString(), e.earnings());

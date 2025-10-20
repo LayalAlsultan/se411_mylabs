@@ -15,6 +15,12 @@ public class CountingTask implements Runnable {
 		while(count > 0) {
 			count--;
 			System.out.printf("Task %s retrieved 1 and now count is %d%n", getTaskId(), getCount());
+			try {
+				Thread.sleep(100);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		
 	}

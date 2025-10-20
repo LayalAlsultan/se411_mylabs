@@ -22,11 +22,11 @@ public class UtilTest {
 		assertEquals(20, calculator.multiply(4,5), "Regular multiplication should work");
 	}
 
-	@RepeatedTest(5)
+	@RepeatedTest(2)
 	@DisplayName("Ensure correct handling of zero")
 	void testMultiplyWithZero() {
-		assertEquals(0, calculator.multiply(0,5), "Multiple with zero should be zero");
-		assertEquals(0, calculator.multiply(5,0), "Multiple with zero should be zero");
+		assertEquals(0, calculator.multiply(0,5), "Multiplying with zero should be zero");
+		assertEquals(0, calculator.multiply(5,0), "Multiplying with zero should be zero");
 	}
 	
 }

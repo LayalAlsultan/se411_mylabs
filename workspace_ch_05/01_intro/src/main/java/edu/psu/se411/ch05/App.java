@@ -13,14 +13,14 @@ public class App {
 	public static void main(String[] args) {
 		logger.info("Application is starting...");
 
-		AdditionTask addThreadA = new AdditionTask("Task_A", 20);		
-		AdditionTask addThreadB = new AdditionTask("Task_B", 20);
+		AdditionTask addTaskA = new AdditionTask("Task_A", 40);		
+		AdditionTask addTaskB = new AdditionTask("Task_B", 20);
 		
-		Thread thread_A = new Thread(addThreadA);
-		thread_A.setPriority(10);
+		Thread thread_A = new Thread(addTaskA);
+		//thread_A.setPriority(10);
 		
-		Thread thread_B = new Thread(addThreadB);
-		thread_B.setPriority(1);
+		Thread thread_B = new Thread(addTaskB);
+		//thread_B.setPriority(1);
 		
 		thread_A.start();
 		thread_B.start();
