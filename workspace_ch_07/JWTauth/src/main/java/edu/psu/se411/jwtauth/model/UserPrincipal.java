@@ -1,4 +1,4 @@
-package edu.psu.se411.basiclogin.model;
+package edu.psu.se411.jwtauth.model;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -9,26 +9,26 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 public class UserPrincipal implements UserDetails {
 
-	private User user;
-
-	public UserPrincipal(User user) {
+	private Users user;
+	
+	public UserPrincipal(Users user) {
 		this.user = user;
 	}
 
+	// Return user roles
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
-		// TODO Auto-generated method stub
 		return Collections.singleton(new SimpleGrantedAuthority("USER"));
 	}
 
 	@Override
 	public String getPassword() {
-		return user.password();
+		return user.getPassword();
 	}
 
 	@Override
 	public String getUsername() {
-		return user.username();
+		return user.getUsername();
 	}
-
+	
 }

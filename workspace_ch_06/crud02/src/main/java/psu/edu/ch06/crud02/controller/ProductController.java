@@ -68,7 +68,6 @@ public class ProductController {
 	           PageRequest.of(
 	                   pageable.getPageNumber(),
 	                   pageable.getPageSize(),
-	                   //Sort.by(new Sort.Order(Sort.Direction.DESC, "price"))));
 	                   pageable.getSortOr(Sort.by(Sort.Direction.DESC, "price"))));
 	   return ResponseEntity.ok(page.getContent());
 	}
