@@ -1,0 +1,177 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>edu.psu.se411</groupId>
+  <artifactId>lab04p</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <name>SE411 Lab 04 - JavaFX Application</name> 
+  <description>A modern JavaFX application built with Maven featuring professional site documentation with fluido skin and custom styling</description> 
+  <url>https://yourProjectUrl.dom</url>
+  
+  <properties>
+  	<maven.compiler.source>20</maven.compiler.source>
+  	<maven.compiler.target>20</maven.compiler.target>
+  </properties>
+  
+  <licenses> 
+  	<license>
+		<name>Apache License 2.0</name>
+		<url>https://www.apache.org/licenses/LICENSE- 2.0</url>
+	</license>
+  </licenses>
+  
+  <organization> 
+  	<name>SE411-Tech-Company</name> 
+  	<url>https://mycompanyUrl.dom</url>
+  </organization>
+  
+  <developers> 
+ 	 <developer>
+		<name>Layal Alsultan</name>
+		<email>layal.alsultan@domain.com</email> 
+	</developer>
+</developers>
+  
+  <dependencies>
+  	<dependency>
+		<groupId>org.openjfx</groupId> <artifactId>javafx-controls</artifactId> <version>20.0.2</version>
+	</dependency>
+	<dependency>
+		<groupId>org.openjfx</groupId>
+		<artifactId>javafx-fxml</artifactId>
+		<version>20.0.2</version>
+	</dependency>
+  </dependencies>
+  
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.apache.maven.skins</groupId>
+        <artifactId>maven-fluido-skin</artifactId>
+        <version>1.11.1</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+  
+  <reporting>
+  	<plugins>
+  		<plugin>
+    		<groupId>org.apache.maven.plugins</groupId>
+    		<artifactId>maven-project-info-reports-plugin</artifactId>
+    		<version>3.5.0</version>
+    		<reportSets>
+    			<reportSet>
+    				<reports>
+    					<report>summary</report>
+    					<report>team</report>
+    					<report>dependencies</report>
+    					<report>dependency-info</report>
+    					<report>licenses</report>
+    					<report>plugins</report>
+    					<report>plugin-management</report>
+    				</reports>
+    			</reportSet>
+    		</reportSets>
+    	</plugin>
+    	
+    	<plugin>
+    		<groupId>org.apache.maven.plugins</groupId>
+    		<artifactId>maven-javadoc-plugin</artifactId>
+    		<version>3.5.0</version>
+    	</plugin>
+    	
+    	<plugin>
+    		<groupId>org.apache.maven.plugins</groupId>
+    		<artifactId>maven-surefire-report-plugin</artifactId>
+    		<version>3.0.0-M9</version>
+    	</plugin>
+    </plugins>
+  </reporting>
+  
+  <build>
+  	<plugins>
+  		<plugin>
+			<groupId>org.openjfx</groupId> <artifactId>javafx-maven-plugin</artifactId> <version>0.0.8</version>
+			<configuration>
+			<mainClass>psu.edu.se411.MainClass</mainClass> </configuration>
+		</plugin>
+		
+		<plugin>
+    		<groupId>org.apache.maven.plugins</groupId>
+    		<artifactId>maven-project-info-reports-plugin</artifactId>
+    		<version>3.5.0</version>
+    		<configuration>
+    			<dependencyDetailsEnabled>true</dependencyDetailsEnabled>
+    		</configuration>
+		</plugin>
+		
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-javadoc-plugin</artifactId>
+			<version>3.5.0</version>
+			<configuration>
+				<source>20</source>
+				<target>20</target>
+				<additionalJOptions>
+					<additionalJOption>-html5</additionalJOption>
+				</additionalJOptions>
+			</configuration>
+		</plugin>
+		
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-surefire-report-plugin</artifactId>
+			<version>3.0.0-M9</version>
+		</plugin>
+		
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-site-plugin</artifactId>
+			<version>3.12.1</version>
+			<configuration>
+				<outputDirectory>${project.build.directory}/site</outputDirectory>
+				<moduleExcludes>
+					<moduleExclude>**</moduleExclude>
+				</moduleExcludes>
+				<attributes>
+					<brand>SE411 Lab 04</brand>
+				</attributes>
+			</configuration>
+			<dependencies>
+				<dependency>
+					<groupId>org.apache.maven.skins</groupId>
+					<artifactId>maven-fluido-skin</artifactId>
+					<version>1.11.1</version>
+				</dependency>
+			</dependencies>
+		</plugin>
+		
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-resources-plugin</artifactId>
+			<version>3.3.1</version>
+			<executions>
+				<execution>
+					<id>copy-custom-resources</id>
+					<phase>pre-site</phase>
+					<goals>
+						<goal>copy-resources</goal>
+					</goals>
+					<configuration>
+						<outputDirectory>${project.build.directory}/site</outputDirectory>
+						<resources>
+							<resource>
+								<directory>src/site/resources</directory>
+								<includes>
+									<include>**/*</include>
+								</includes>
+							</resource>
+						</resources>
+					</configuration>
+				</execution>
+			</executions>
+		</plugin>
+  	</plugins>
+  </build>
+  
+</project>
