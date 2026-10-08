@@ -1,0 +1,267 @@
+/* Modern Site CSS Variables Quick Reference */
+
+/**
+ * PRIMARY COLOR SCHEME
+ * 
+ * --primary-color: #0066cc (Main Blue)
+ *   Used for: Links, buttons, headings, borders, accents
+ * 
+ * --primary-dark: #004999 (Dark Blue)
+ *   Used for: Footer, dark accents, header gradient
+ * 
+ * --primary-light: #e6f0ff (Light Blue)
+ *   Used for: Hover backgrounds, highlights, card backgrounds
+ */
+
+/**
+ * SECONDARY COLOR SCHEME
+ * 
+ * --secondary-color: #00b4d8 (Cyan)
+ *   Used for: Hover states, focus indicators, alternative accents
+ * 
+ * --accent-color: #ff6b6b (Red)
+ *   Used for: Error states, alerts, important information
+ */
+
+/**
+ * NEUTRAL COLORS
+ * 
+ * --bg-color: #f8f9fa (Light Background)
+ *   Used for: Body background, section backgrounds
+ * 
+ * --surface-color: #ffffff (White)
+ *   Used for: Cards, panels, main content area
+ * 
+ * --text-primary: #1a1a1a (Dark Text)
+ *   Used for: Main text content, headings
+ * 
+ * --text-secondary: #666666 (Gray Text)
+ *   Used for: Supporting text, descriptions
+ * 
+ * --border-color: #e0e0e0 (Light Gray)
+ *   Used for: Borders, dividers, separators
+ */
+
+/**
+ * EFFECTS & SHADOWS
+ * 
+ * --shadow: 0 2px 8px rgba(0, 0, 0, 0.1)
+ *   Used for: Subtle shadows on cards, panels
+ * 
+ * --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15)
+ *   Used for: Prominent shadows on headers, modals
+ */
+
+/* ============================================
+ * FEATURED MODERN CSS FEATURES
+ * ============================================ */
+
+/**
+ * 1. GRADIENT BACKGROUNDS
+ * 
+ * Usage: Headers, buttons, footer
+ * Effect: Smooth linear gradient from primary to dark color
+ * Angle: 135 degrees for diagonal modern look
+ * 
+ * Example:
+ * background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+ */
+
+/**
+ * 2. SMOOTH ANIMATIONS
+ * 
+ * slideInDown: Banner slides in from top on page load
+ * fadeIn: Main content fades in
+ * pulse: Subtle opacity pulse effect
+ * 
+ * All transitions use cubic-bezier for natural motion
+ */
+
+/**
+ * 3. RESPONSIVE DESIGN BREAKPOINTS
+ * 
+ * @media (max-width: 768px) - Mobile/Tablet
+ *   - Adjusted font sizes
+ *   - Flexible layouts
+ *   - Touch-friendly spacing
+ *   - Optimized navigation
+ */
+
+/**
+ * 4. INTERACTIVE HOVER EFFECTS
+ * 
+ * Links:
+ *   - Color change with background highlight
+ *   - Underline animation reveals on hover
+ *   - Transform: translateX(2px)
+ * 
+ * Buttons:
+ *   - Ripple effect emanates from center
+ *   - Translate up 3px
+ *   - Box shadow expands
+ *   - Smooth cubic-bezier timing
+ * 
+ * Navigation Items:
+ *   - Smooth color transitions
+ *   - Left border indicator
+ *   - Padding animation
+ * 
+ * Table Rows:
+ *   - Background color change
+ *   - Subtle scale effect
+ *   - Inset box shadow
+ */
+
+/**
+ * 5. TYPOGRAPHY HIERARCHY
+ * 
+ * h1: 2.8em - Page title with gradient text
+ * h2: 2.2em - Section headers with left border
+ * h3: 1.6em - Subsection headers with left accent
+ * h4-h6: 1em - Smaller headings
+ * p: 1em - Body text with optimized line-height
+ * 
+ * Font Stack:
+ * -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial
+ * (System fonts ensure optimal rendering on all devices)
+ */
+
+/**
+ * 6. ACCESSIBILITY FEATURES
+ * 
+ * - Focus states with visible outlines
+ * - High contrast colors (WCAG AA compliant)
+ * - Clear hover indicators
+ * - Semantic HTML support
+ * - Print-friendly styles
+ * - Keyboard navigation friendly
+ */
+
+/**
+ * 7. MODERN COMPONENT STYLING
+ * 
+ * Panels:
+ *   - Rounded corners: 6px
+ *   - Gradient header backgrounds
+ *   - Subtle shadows
+ *   - Left border accent
+ * 
+ * Navigation:
+ *   - Fluido skin integration
+ *   - Sticky sidebar positioning
+ *   - Smooth menu transitions
+ *   - Active state indicators
+ * 
+ * Breadcrumbs:
+ *   - Rounded styling
+ *   - Clear separators
+ *   - Accent colors for navigation
+ * 
+ * Code Blocks:
+ *   - "CODE" label indicator
+ *   - Monospace fonts
+ *   - Light background
+ *   - Syntax-friendly styling
+ * 
+ * Footers:
+ *   - Dark gradient background
+ *   - Top border accent
+ *   - Large shadows for prominence
+ *   - Secondary color for links
+ */
+
+/* ============================================
+ * CUSTOMIZATION EXAMPLES
+ * ============================================ */
+
+/*
+ * EXAMPLE 1: Change Primary Color Theme
+ * 
+ * :root {
+ *   --primary-color: #e74c3c;        (Change from blue to red)
+ *   --primary-dark: #c0392b;
+ *   --primary-light: #fadbd8;
+ *   --secondary-color: #f39c12;     (Change accent to orange)
+ * }
+ */
+
+/*
+ * EXAMPLE 2: Modify Link Animation Speed
+ * 
+ * a {
+ *   transition: all 0.5s ease;      (Change from 0.3s)
+ * }
+ */
+
+/*
+ * EXAMPLE 3: Adjust Button Animation
+ * 
+ * button:hover {
+ *   transform: translateY(-5px);    (Change from -3px)
+ * }
+ */
+
+/*
+ * EXAMPLE 4: Change Typography Scale
+ * 
+ * h1 { font-size: 3.5em; }          (Make larger)
+ * h2 { font-size: 2.5em; }
+ * h3 { font-size: 1.8em; }
+ */
+
+/* ============================================
+ * BROWSER COMPATIBILITY
+ * ============================================ */
+
+/*
+ * CSS Features Used:
+ * ✓ CSS Custom Properties (Variables) - IE11 not supported
+ * ✓ CSS Gradients - All modern browsers
+ * ✓ Flexbox - IE11+ with prefixes
+ * ✓ CSS Transforms - All modern browsers
+ * ✓ CSS Animations - All modern browsers
+ * ✓ Box Shadow - All browsers
+ * ✓ Border Radius - All browsers
+ * ✓ Media Queries - All modern browsers
+ * ✓ Transitions - All modern browsers
+ * 
+ * Target Browsers:
+ * Chrome 90+, Firefox 88+, Safari 14+, Edge 90+, Mobile browsers
+ */
+
+/* ============================================
+ * PERFORMANCE OPTIMIZATION
+ * ============================================ */
+
+/*
+ * CSS Size: ~764 lines
+ * File Size: ~15KB (unminified)
+ * 
+ * Optimization Techniques:
+ * - CSS Variables reduce code duplication
+ * - Single stylesheet reduces HTTP requests
+ * - Efficient selectors for better performance
+ * - Hardware-accelerated transforms
+ * - Optimized media query structure
+ * - Minimal repaints with targeted hover states
+ */
+
+/* ============================================
+ * MAINTENANCE NOTES
+ * ============================================ */
+
+/*
+ * To update the site styling:
+ * 1. Edit: src/site/resources/css/custom-style.css
+ * 2. Modify the :root variables for color changes
+ * 3. Update specific component sections
+ * 4. Regenerate site: mvn clean site
+ * 5. Verify in target/site/index.html
+ * 
+ * Common modifications:
+ * - Color scheme: Modify :root variables
+ * - Typography: Adjust h1-h6 font-sizes
+ * - Spacing: Modify padding/margin values
+ * - Animation speed: Update transition times
+ * - Shadows: Adjust shadow values
+ */

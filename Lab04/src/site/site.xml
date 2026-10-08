@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Lab 04 - SE411 JavaFX Application" xmlns="http://maven.apache.org/DECORATION/1.8.0">
+	<skin>
+		<groupId>org.apache.maven.skins</groupId>
+		<artifactId>maven-fluido-skin</artifactId>
+		<version>1.11.1</version>
+	</skin>
+	
+	<bannerLeft>
+		<name>SE411 Lab 04</name>
+		<href>https://www.psu.edu</href>
+	</bannerLeft>
+
+	<body>
+		<links>
+			<item name="PSU" href="https://www.psu.edu" />
+			<item name="SE411 Course" href="#" />
+		</links>
+		
+		<head>
+			<![CDATA[
+				<link rel="stylesheet" href="css/custom-style.css" type="text/css" />
+				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+				<meta name="theme-color" content="#0066cc" />
+			]]>
+		</head>
+
+		<menu name="Overview">
+			<item name="Introduction" href="index.html" />
+			<item name="About" href="/about.html" />
+		</menu>
+
+		<menu name="Documentation">
+			<item name="JavaDoc" href="apidocs/index.html" />
+			<item name="Source Code" href="/source-repository.html" />
+		</menu>
+
+		<menu name="Project Information">
+			<item name="Project Summary" href="project-info.html" />
+			<item name="Team" href="team-list.html" />
+			<item name="Dependencies" href="dependencies.html" />
+			<item name="Dependency Tree" href="dependency-tree.html" />
+			<item name="Plugins" href="plugins.html" />
+			<item name="Licenses" href="license.html" />
+		</menu>
+
+		<menu name="Reports">
+			<item name="Surefire Report" href="surefire-report.html" />
+		</menu>
+	</body>
+</project>

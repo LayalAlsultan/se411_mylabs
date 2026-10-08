@@ -1,0 +1,763 @@
+/**
+ * Modern CSS Stylesheet for Lab04p Project Site
+ * Enhanced design with modern aesthetics, better typography, and responsive layout
+ * Optimized for Apache Maven Fluido Skin
+ */
+
+/* ============================================
+   Color Scheme & Variables
+   ============================================ */
+:root {
+  --primary-color: #0066cc;
+  --primary-dark: #004999;
+  --primary-light: #e6f0ff;
+  --secondary-color: #00b4d8;
+  --accent-color: #ff6b6b;
+  --bg-color: #f8f9fa;
+  --surface-color: #ffffff;
+  --text-primary: #1a1a1a;
+  --text-secondary: #666666;
+  --border-color: #e0e0e0;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* ============================================
+   Fluido Skin Overrides
+   ============================================ */
+#topbar {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%) !important;
+  box-shadow: var(--shadow-lg);
+}
+
+#topbar a {
+  color: white !important;
+}
+
+#topbar a:hover {
+  color: var(--secondary-color) !important;
+}
+
+.navbar-nav {
+  background: transparent !important;
+}
+
+.nav-tabs > .active > a {
+  background-color: var(--primary-light) !important;
+  color: var(--primary-dark) !important;
+  border-bottom: 3px solid var(--primary-color) !important;
+}
+
+.nav-tabs > li > a:hover {
+  background-color: var(--bg-color) !important;
+  border-bottom-color: var(--secondary-color) !important;
+}
+
+#main-content {
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  background: var(--surface-color);
+}
+
+.panel {
+  border: 1px solid var(--border-color) !important;
+  border-radius: 6px !important;
+  box-shadow: var(--shadow) !important;
+  margin-bottom: 1.5rem;
+}
+
+.panel-heading {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%) !important;
+  color: white !important;
+  border-radius: 6px 6px 0 0 !important;
+  border: none !important;
+}
+
+.panel-heading h4 {
+  color: white !important;
+  margin: 0 !important;
+}
+
+.list-group-item {
+  border-left: 4px solid var(--primary-light);
+  transition: all 0.2s ease;
+}
+
+.list-group-item:hover {
+  background-color: var(--primary-light);
+  border-left-color: var(--primary-color);
+}
+
+.breadcrumb {
+  background: var(--surface-color) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 4px !important;
+  padding: 1rem !important;
+  box-shadow: var(--shadow) !important;
+}
+
+.breadcrumb > li + li:before {
+  color: var(--primary-color) !important;
+}
+
+/* ============================================
+   Global Styles
+   ============================================ */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background-color: var(--bg-color);
+}
+
+/* ============================================
+   Typography
+   ============================================ */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--text-primary);
+}
+
+h1 {
+  font-size: 2.8em;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  border-bottom: 3px solid var(--primary-color);
+  padding-bottom: 0.3em;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2.2em;
+  color: var(--primary-dark);
+  border-left: 5px solid var(--primary-color);
+  padding-left: 1rem;
+}
+
+h3 {
+  font-size: 1.6em;
+  color: var(--primary-color);
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+h3:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 1em;
+  background: var(--primary-color);
+  border-radius: 2px;
+}
+
+h4, h5, h6 {
+  color: var(--primary-color);
+}
+
+p {
+  margin: 0 0 1em 0;
+  color: var(--text-secondary);
+}
+
+/* ============================================
+   Links & Interactive Elements
+   ============================================ */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  border-radius: 3px;
+  padding: 2px 4px;
+}
+
+a:hover {
+  color: var(--primary-dark);
+  background-color: var(--primary-light);
+  transform: translateX(2px);
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  transition: width 0.3s ease;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+/* ============================================
+   Code & Source
+   ============================================ */
+.source {
+  background: linear-gradient(to right, #f5f5f5 0%, #fafafa 100%);
+  border-left: 4px solid var(--primary-color);
+  padding: 1.2em;
+  margin: 1.5em 0;
+  border-radius: 4px;
+  overflow-x: auto;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+.source::before {
+  content: "CODE";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--primary-color);
+  color: white;
+  padding: 0.3em 0.8em;
+  font-size: 0.75em;
+  font-weight: 700;
+  border-radius: 0 4px 0 4px;
+  letter-spacing: 0.5px;
+}
+
+.source pre {
+  margin: 0;
+  padding: 0;
+  font-family: 'Fira Code', 'Courier New', monospace;
+  font-size: 0.9em;
+  line-height: 1.6;
+  color: var(--text-primary);
+}
+
+code {
+  font-family: 'Fira Code', 'Courier New', monospace;
+  background-color: #f0f0f0;
+  padding: 3px 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+  color: #d63384;
+}
+
+pre code {
+  background: none;
+  color: inherit;
+  padding: 0;
+}
+
+/* ============================================
+   Layout & Container
+   ============================================ */
+#banner {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  color: white;
+  padding: 2rem 0;
+  box-shadow: var(--shadow);
+  margin-bottom: 2rem;
+}
+
+#bannerLeft, #bannerRight {
+  font-size: 1.8em;
+  font-weight: 700;
+  margin: 0;
+}
+
+#bannerLeft {
+  float: left;
+  padding-left: 2rem;
+}
+
+#bannerRight {
+  float: right;
+  padding-right: 2rem;
+}
+
+#banner a {
+  color: white;
+  padding: 0;
+}
+
+#banner a:hover {
+  color: var(--secondary-color);
+  background: none;
+}
+
+#breadcrumbs {
+  padding: 1rem 2rem;
+  background-color: var(--surface-color);
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.9em;
+  margin-bottom: 1.5rem;
+}
+
+#breadcrumbs a {
+  color: var(--primary-color);
+}
+
+/* ============================================
+   Main Content Layout
+   ============================================ */
+#leftColumn {
+  width: 260px;
+  float: left;
+  overflow: auto;
+  padding: 0 1rem 2rem 2rem;
+  position: sticky;
+  top: 20px;
+}
+
+#bodyColumn {
+  margin-left: 280px;
+  margin-right: 2rem;
+  padding: 0;
+  background-color: var(--surface-color);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+}
+
+/* ============================================
+   Navigation Sidebar
+   ============================================ */
+/* ============================================
+   Sidebar & Navigation
+   ============================================ */
+#navcolumn {
+  padding: 1rem;
+}
+
+#navcolumn h5 {
+  margin: 1.5em 0 0.8em 0;
+  padding: 0.8em 1rem;
+  font-size: 0.95em;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  border-radius: 6px 6px 0 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: var(--shadow);
+}
+
+#navcolumn ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: var(--bg-color);
+  border-radius: 0 0 6px 6px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+#navcolumn li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.95em;
+  border-bottom: 1px solid var(--border-color);
+}
+
+#navcolumn li:last-child {
+  border-bottom: none;
+}
+
+#navcolumn li a {
+  display: block;
+  padding: 0.8em 1rem;
+  transition: all 0.25s ease;
+  border-left: 4px solid transparent;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+#navcolumn li a:hover {
+  background-color: var(--primary-light);
+  border-left-color: var(--primary-color);
+  color: var(--primary-dark);
+  padding-left: 1.5rem;
+}
+
+.navSection {
+  margin-bottom: 1.5em;
+  padding: 0.8em;
+  background-color: var(--bg-color);
+  border-radius: 6px;
+  border-left: 4px solid var(--primary-color);
+}
+
+.navSectionHead {
+  font-weight: 700;
+  font-size: 0.95em;
+  color: var(--primary-dark);
+  margin: 0;
+}
+
+/* ============================================
+   Animations
+   ============================================ */
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+#banner {
+  animation: slideInDown 0.6s ease-out;
+}
+
+#main-content {
+  animation: fadeIn 0.4s ease-in;
+}
+
+/* ============================================
+   Tables
+   ============================================ */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+  box-shadow: var(--shadow);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+table.bodyTable {
+  width: 100%;
+}
+
+table.bodyTable th {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  color: white;
+  padding: 1em;
+  font-weight: 600;
+  text-align: left;
+  border: none;
+}
+
+table.bodyTable td {
+  padding: 0.8em 1em;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-secondary);
+}
+
+table.bodyTable tr:hover {
+  background-color: var(--primary-light);
+  transform: scale(1.01);
+  box-shadow: inset 0 0 10px rgba(0, 102, 204, 0.1);
+  transition: all 0.2s ease;
+}
+
+table.bodyTable tr:last-child td {
+  border-bottom: none;
+}
+
+/* ============================================
+   Code & Source
+   ============================================ */
+.source {
+  background-color: #f5f5f5;
+  border-left: 4px solid var(--primary-color);
+  padding: 1.2em;
+  margin: 1.5em 0;
+  border-radius: 4px;
+  overflow-x: auto;
+  box-shadow: var(--shadow);
+}
+
+.source pre {
+  margin: 0;
+  padding: 0;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+/* ============================================
+   Footer
+   ============================================ */
+#footer {
+  margin-top: 3em;
+  padding: 2.5em 2em;
+  background: linear-gradient(135deg, var(--primary-dark) 0%, #003d7a 100%);
+  color: white;
+  text-align: center;
+  font-size: 0.9em;
+  border-top: 3px solid var(--primary-color);
+  box-shadow: var(--shadow-lg);
+}
+
+#footer p {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0.5em 0;
+}
+
+#footer a {
+  color: var(--secondary-color);
+  padding: 0;
+}
+
+#footer a:hover {
+  color: white;
+  background: none;
+  text-decoration: underline;
+  transform: none;
+}
+
+#footer a::after {
+  display: none;
+}
+
+#lastPublished {
+  font-size: 0.85em;
+  opacity: 0.9;
+  margin-top: 1em;
+  padding-top: 1em;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ============================================
+   Buttons & Interactive Elements
+   ============================================ */
+button, .button, input[type="button"], input[type="submit"], .btn {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  color: white;
+  border: none;
+  padding: 0.8em 1.5em;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+button::before, .button::before, input[type="button"]::before, input[type="submit"]::before, .btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+button:hover, .button:hover, input[type="button"]:hover, input[type="submit"]:hover, .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+button:hover::before, .button:hover::before, input[type="button"]:hover::before, input[type="submit"]:hover::before, .btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+button:active, .button:active, input[type="button"]:active, input[type="submit"]:active, .btn:active {
+  transform: translateY(-1px);
+}
+
+/* ============================================
+   Search Box
+   ============================================ */
+#search {
+  margin: 1.5em 0;
+  padding: 1.5em;
+  background: var(--bg-color);
+  border-radius: 6px;
+  box-shadow: var(--shadow);
+}
+
+#search form {
+  display: flex;
+  gap: 0.5em;
+}
+
+#search input {
+  flex: 1;
+  padding: 0.8em 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 0.95em;
+  transition: all 0.3s ease;
+  background: var(--surface-color);
+}
+
+#search input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px var(--primary-light);
+  background: var(--surface-color);
+}
+
+#search button, #search input[type="submit"] {
+  padding: 0.8em 1.5em;
+}
+
+/* ============================================
+   Section & Content
+   ============================================ */
+.section {
+  padding: 1.5em;
+  margin: 1.5em 0;
+  background-color: var(--bg-color);
+  border-radius: 6px;
+  border-left: 4px solid var(--primary-color);
+}
+
+/* ============================================
+   Lists
+   ============================================ */
+ul, ol {
+  margin: 1em 0;
+  padding-left: 2em;
+}
+
+li {
+  margin: 0.5em 0;
+  color: var(--text-secondary);
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+@media (max-width: 768px) {
+  #leftColumn {
+    width: 100%;
+    float: none;
+    padding: 0 1rem;
+    position: static;
+    margin-bottom: 2rem;
+  }
+
+  #bodyColumn {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 1.5rem;
+  }
+
+  #banner {
+    padding: 1.5rem 1rem;
+  }
+
+  #bannerLeft, #bannerRight {
+    float: none;
+    padding: 0;
+    font-size: 1.4em;
+    display: block;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h2 {
+    font-size: 1.4em;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  table {
+    font-size: 0.9em;
+  }
+
+  table.bodyTable th, table.bodyTable td {
+    padding: 0.6em 0.4em;
+  }
+}
+
+/* ============================================
+   Utilities
+   ============================================ */
+.clear {
+  clear: both;
+  visibility: hidden;
+}
+
+.clear hr {
+  display: none;
+}
+
+acronym {
+  cursor: help;
+  border-bottom: 1px dotted var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+acronym:hover {
+  background-color: var(--primary-light);
+  border-bottom-color: var(--primary-dark);
+}
+
+/* ============================================
+   Print Styles
+   ============================================ */
+@media print {
+  body {
+    background: white;
+  }
+
+  #banner, #breadcrumbs, #footer {
+    background: white;
+    color: black;
+    border: none;
+  }
+
+  a {
+    color: black;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+}
